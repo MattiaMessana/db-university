@@ -30,4 +30,24 @@ SELECT *
 FROM `degrees`
 WHERE `level` = "magistrale"
 
+-- 7. Da quanti dipartimetni è composta l'univesità? 
+SELECT COUNT(*)
+FROM `departments`
 
+-- 8. Quanti sono gli insegnati che non hanno numero di telefono? 
+SELECT COUNT(*)
+FROM `teachers`
+WHERE `phone` IS NULL
+
+-- 9. Inserire nella tabella degli stundenti un nuovo record con i propri dati (per il campo dgree_id inserire un valore casuale)
+INSERT INTO `students` (`degree_id`,`name`, `surname`, `date_of_birth`, `fiscal_code`, `enrolment_date`, `registration_number`, `email`)
+VALUES ( "50","Mattia" , "Messana" , "1998-06-17", "MSSMTT98H17G273A", "2024-02-14", "420", "mattia@messana.com")
+
+-- 10. Cambiare il numero dell'ufficio del professor Artemide Rizzi (Pietro Rizzo non lo trovo) in 126
+UPDATE `teachers`
+SET `office_number` = "126"
+WHERE `id` = 1;
+
+-- 11. Eliminare dalla tabella studenti il record creato precedentemente al punto 9 
+DELETE FROM `students`
+WHERE `id` = 5002
