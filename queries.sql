@@ -8,3 +8,26 @@ SELECT *
 FROM `courses`
 WHERE `cfu` > 10
 
+-- 3. Selezionare tutti gli studenti che hanno più di 30 anni 
+SELECT *
+FROM `students`
+WHERE `date_of_birth`
+
+-- 4. Selezionare tutti i corsi del primo semestre del primo anno di un qualisasi corso di laurea
+SELECT *
+FROM `courses`
+WHERE `year` = 1
+AND `period` = "I semestre"
+
+-- 5. Selezionare tutti gli appelli d'esame che avvengono nel pomeriggio (dopo le 14) del 20/06/2020
+SELECT *
+FROM `exams`
+WHERE `hour` > "14:00:00"
+AND `date` = "2020:06:20"
+
+-- 6. Selezionare tutti i corsi di laurea magistrale 
+SELECT *
+FROM `degrees`
+WHERE `level` = "magistrale"
+
+
