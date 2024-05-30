@@ -26,5 +26,5 @@ GROUP BY `DIPARTIMENTO`
 SELECT COUNT(`degrees`.`id`) AS `n. CORSO DI LAUREA`, `departments`.`name` AS `DIPARTIMENTO`
 FROM `degrees`
 INNER JOIN `departments`
-ON `degrees`.department_id = `departments`.`id`
+ON `degrees`.`department_id` = `departments`.`id`
 GROUP BY `department_id`
